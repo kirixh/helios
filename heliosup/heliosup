@@ -6,7 +6,7 @@ set -e
 REPO="a16z/helios"
 NAME=helios
 
-DIR=$HOME/.$NAME
+DIR=/usr/bin/$NAME
 BIN_DIR=$DIR/bin
 
 # delete existing binaries
