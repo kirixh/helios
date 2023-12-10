@@ -33,6 +33,10 @@ case $SHELL in
     PROFILE=$HOME/.config/fish/config.fish
     PREF_SHELL=fish
     ;;
+*/ash)
+    PROFILE=/etc/profile
+    PREF_SHELL=ash
+    ;;
 *)
     echo "$INSTALLER_NAME: could not detect shell, manually add ${BIN_DIR} to your PATH."
     exit 1
