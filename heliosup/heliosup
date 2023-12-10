@@ -9,11 +9,12 @@ NAME=helios
 DIR=/usr/bin/$NAME
 BIN_DIR=$DIR/bin
 
+mkdir -p $BIN_DIR
+
 # delete existing binaries
 rm -f $BIN_DIR/$NAME
 
 TAG=$(curl https://api.github.com/repos/$REPO/releases/latest | grep -o '"tag_name": "[^"]*' | grep -o '[^"]*$')
-echo $TAG
 
 PLATFORM="$(uname -s)"
 case $PLATFORM in
@@ -27,7 +28,7 @@ case $PLATFORM in
     err "unsupported platform: $PLATFORM"
     ;;
 esac
-echo $PLATFORM
+
 ARCHITECTURE="$(uname -m)"
 if [ "${ARCHITECTURE}" = "x86_64" ]; then
   # Redirect stderr to /dev/null to avoid printing errors if non Rosetta.
