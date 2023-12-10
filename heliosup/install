@@ -8,6 +8,8 @@ NAME=helios
 
 INSTALLER_NAME=${NAME}up
 
+SHELL=/bin/ash
+
 DIR=$HOME/.$NAME
 BIN_DIR=$DIR/bin
 
