@@ -40,7 +40,7 @@ else
 fi
 
 # TARBALL_URL="https://github.com/$REPO/releases/download/${TAG}/${NAME}_${PLATFORM}_${ARCHITECTURE}.tar.gz"
-TARBALL_URL="https://github.com/$REPO/releases/download/${TAG}/helios_linux_amd64.tar.gz
+TARBALL_URL="https://github.com/$REPO/releases/download/${TAG}/helios_linux_amd64.tar.gz"
 
 curl -L $TARBALL_URL | tar -xzC $DIR
 
